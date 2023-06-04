@@ -11,3 +11,7 @@
  width: 90%;
  margin: 0 auto;
 }
+.left {
+    display: inline-block;
+    width: 100px;
+}
