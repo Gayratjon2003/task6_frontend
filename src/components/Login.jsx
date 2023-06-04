@@ -43,7 +43,7 @@ function Login() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    if (formData.get("name").length >= 3) {
+    if (formData.get("name").length > 1) {
       localStorage.setItem("name", JSON.stringify(formData.get("name")));
       navigate("/");
       dispatch(
@@ -55,7 +55,7 @@ function Login() {
     } else {
       dispatch(
         snackbarStart({
-          text: "Name must be more than 3 characters",
+          text: "Name must be more than 1 characters",
           severity: "error",
         })
       );
