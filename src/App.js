@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Login, SignUp } from "./components";
+import { Home, Login } from "./components";
 import { useDispatch, useSelector } from "react-redux";
 import { Snackbar, Alert, Box, CircularProgress } from "@mui/material";
 import { snackbarDone } from "./store/SnackbarSlice";
