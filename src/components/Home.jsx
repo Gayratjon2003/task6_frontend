@@ -63,7 +63,7 @@ const Home = () => {
   };
   useEffect(() => {
     const user = fetchUser();
-    if (!user) navigate("/login");
+    if (!user) return navigate("/login");
     getRequest();
   }, []);
 
