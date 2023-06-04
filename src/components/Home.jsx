@@ -63,8 +63,8 @@ const Home = () => {
   };
   useEffect(() => {
     const user = fetchUser();
-    getRequest();
     if (!user) navigate("/login");
+    getRequest();
   }, []);
 
   const getName = () => {
