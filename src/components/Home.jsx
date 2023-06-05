@@ -81,7 +81,7 @@ const Home = () => {
     await setTitle(value);
   };
   const sendMessage = async () => {
-    if (name.length > 1 && title.length > 1 && message.length >= 3) {
+    if (name.length > 1 && title.length > 1 && message.length > 0 ) {
       dispatch(start());
       try {
         const { data } = await axios({
@@ -120,7 +120,7 @@ const Home = () => {
     } else {
       dispatch(
         snackbarStart({
-          text: "Name, title or message is incorrect",
+          text: "Name, title or message is required!",
           severity: "error",
         })
       );
